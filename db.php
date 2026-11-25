@@ -1,9 +1,14 @@
-<?php 
-$hotsname = "localhost";
+<?php
+$hostname = "localhost";
 $username = "root";
 $password = "";
-$database = "sistema_endereços";
+$database = "enderecos";
 
-$conexao = mysqli_connect($hotsname, $username, $password, $database);
+$conexao = mysqli_connect($hostname, $username, $password, $database);
 
+if (!$conexao) {
+    die("Erro na conexão: " . mysqli_connect_error());
+}
+
+echo "Conexão realizada com sucesso!";
 ?>
